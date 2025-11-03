@@ -24,7 +24,7 @@
     "require-dev": {
         "pestphp/pest": "^0.3.0",
         "s9e/regexp-builder": "^1.4",
-        "spatie/emoji": "^2.3.0",
+        "spatie/emoji": "^4.0",
         "spatie/pest-plugin-snapshots": "^1.0"
     },
     "suggest": {
@@ -38,7 +38,10 @@
         }
     },
     "config": {
-        "sort-packages": true
+        "sort-packages": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
     },
     "scripts": {
         "generate": "php ./generate.php",
