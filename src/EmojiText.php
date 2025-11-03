@@ -66,6 +66,12 @@ class EmojiText
 
     protected function regexp(): string
     {
-        return '/'.file_get_contents(__DIR__.'/emoji_bytes.regexp').'/';
+        static $regexp = null;
+
+        if ($regexp === null) {
+            $regexp = '/'.file_get_contents(__DIR__.'/emoji_bytes.regexp').'/';
+        }
+
+        return $regexp;
     }
 }
